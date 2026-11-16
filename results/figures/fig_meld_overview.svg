@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" width="980" height="430" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="980" height="430" fill="#ffffff" rx="8"/>
+  <rect x="8" y="8" width="964" height="414" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" rx="6"/>
+  
+  <text x="490" y="34" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">Figure 1: MELD Dataset Structure — Multi-Party Dialogue Context, Trimodal Features, and Severe Class Imbalance</text>
+  
+  <!-- Left Panel: Authentic MELD Dialogue Example (Friends) -->
+  <rect x="24" y="50" width="465" height="354" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" rx="6"/>
+  <rect x="24" y="50" width="465" height="30" fill="#1e293b" rx="6"/>
+  <text x="256" y="70" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">A. Authentic MELD Dialogue Snippet (Friends TV Series, PKL Verified)</text>
+  
+  <!-- Utterance 1 -->
+  <rect x="38" y="92" width="437" height="54" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+  <circle cx="58" cy="119" r="14" fill="#3b82f6"/>
+  <text x="58" y="123" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S1</text>
+  <text x="80" y="108" font-size="11" font-weight="bold" fill="#1e3a8a">u₁ (Joey): <tspan font-weight="normal" fill="#334155">"Good job Joe! Well done! Top notch!"</tspan></text>
+  <text x="80" y="126" font-size="10" fill="#475569">Text (600-d TextCNN)  |  Audio (300-d OpenSMILE)  |  Visual (342-d DenseNet)</text>
+  <rect x="405" y="97" width="62" height="18" fill="#dcfce7" stroke="#16a34a" rx="3"/>
+  <text x="436" y="110" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">joy (4)</text>
+
+  <!-- Utterance 2 -->
+  <rect x="38" y="156" width="437" height="54" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+  <circle cx="58" cy="183" r="14" fill="#0d9488"/>
+  <text x="58" y="187" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S2</text>
+  <text x="80" y="172" font-size="11" font-weight="bold" fill="#134e4a">u₂ (Chandler): <tspan font-weight="normal" fill="#334155">"You liked it? You really liked it?"</tspan></text>
+  <text x="80" y="190" font-size="10" fill="#475569">High pitch rise in Audio (300-d) + Raised eyebrows in Visual (342-d)</text>
+  <rect x="395" y="161" width="72" height="18" fill="#fef9c3" stroke="#ca8a04" rx="3"/>
+  <text x="431" y="174" font-size="10" font-weight="bold" fill="#a16207" text-anchor="middle">surprise (1)</text>
+
+  <!-- Utterance 3 -->
+  <rect x="38" y="220" width="437" height="54" fill="#f1f5f9" stroke="#cbd5e1" rx="4"/>
+  <circle cx="58" cy="247" r="14" fill="#3b82f6"/>
+  <text x="58" y="251" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S1</text>
+  <text x="80" y="236" font-size="11" font-weight="bold" fill="#1e3a8a">u₃ (Joey): <tspan font-weight="normal" fill="#334155">"Oh-no-no-no, give me some specifics."</tspan></text>
+  <text x="80" y="254" font-size="10" fill="#475569">Speaker identity embedding s(u₃)=S1 added to text node l₃</text>
+  <rect x="400" y="225" width="67" height="18" fill="#fee2e2" stroke="#dc2626" rx="3"/>
+  <text x="433" y="238" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">anger (6)</text>
+
+  <!-- Utterance 4 -->
+  <rect x="38" y="284" width="437" height="58" fill="#fff1f2" stroke="#f43f5e" stroke-dasharray="4,2" rx="4"/>
+  <circle cx="58" cy="313" r="14" fill="#e11d48"/>
+  <text x="58" y="317" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S2</text>
+  <text x="80" y="300" font-size="10.5" font-weight="bold" fill="#881337">u₄ (Minority Emotion Challenges in MELD):</text>
+  <text x="80" y="316" font-size="9.5" fill="#9f1239">Fear (1.9% test) &amp; Disgust (2.6% test) share lexical overlap with Anger/Neutral.</text>
+  <text x="80" y="331" font-size="9.3" fill="#9f1239">Without class weighting/logit adj., MMGCN predicts them ≤ 4 times in 2,610 utterances!</text>
+
+  <text x="256" y="366" font-size="10" fill="#334155" text-anchor="middle" font-weight="bold">Dataset Splits in MELD_features_raw1.pkl (84.1 MiB, up to 9 speakers/dialogue):</text>
+  <text x="256" y="384" font-size="9.6" fill="#475569" text-anchor="middle">Train: 1,038 dia (8,990 utt)  |  Valid (10%): 115 dia (999 utt)  |  Test: 280 dia (2,610 utt)</text>
+
+  <!-- Right Panel: Class Distribution & Imbalance Chart -->
+  <rect x="505" y="50" width="451" height="354" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" rx="6"/>
+  <rect x="505" y="50" width="451" height="30" fill="#1e293b" rx="6"/>
+  <text x="730" y="70" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">B. MELD Class Imbalance (Train vs. Test Support &amp; B0 F1 Collapse)</text>
+
+  <!-- Horizontal bars for 7 classes -->
+  <!-- Neutral -->
+  <text x="580" y="112" font-size="10.5" font-weight="bold" fill="#1e293b" text-anchor="end">0: neutral</text>
+  <rect x="588" y="99" width="175" height="18" fill="#3b82f6" rx="2"/>
+  <text x="770" y="112" font-size="10" fill="#0f172a">47.1% (Test: 1,256) | B0 F1: 75.2%</text>
+
+  <!-- Joy -->
+  <text x="580" y="148" font-size="10.5" font-weight="bold" fill="#1e293b" text-anchor="end">4: joy</text>
+  <rect x="588" y="135" width="65" height="18" fill="#10b981" rx="2"/>
+  <text x="660" y="148" font-size="10" fill="#0f172a">17.4% (Test: 402) | B0 F1: 52.2%</text>
+
+  <!-- Anger -->
+  <text x="580" y="184" font-size="10.5" font-weight="bold" fill="#1e293b" text-anchor="end">6: anger</text>
+  <rect x="588" y="171" width="44" height="18" fill="#f59e0b" rx="2"/>
+  <text x="639" y="184" font-size="10" fill="#0f172a">11.1% (Test: 345) | B0 F1: 43.8%</text>
+
+  <!-- Surprise -->
+  <text x="580" y="220" font-size="10.5" font-weight="bold" fill="#1e293b" text-anchor="end">1: surprise</text>
+  <rect x="588" y="207" width="46" height="18" fill="#8b5cf6" rx="2"/>
+  <text x="641" y="220" font-size="10" fill="#0f172a">12.0% (Test: 281) | B0 F1: 46.5%</text>
+
+  <!-- Sadness -->
+  <text x="580" y="256" font-size="10.5" font-weight="bold" fill="#1e293b" text-anchor="end">3: sadness</text>
+  <rect x="588" y="243" width="27" height="18" fill="#64748b" rx="2"/>
+  <text x="622" y="256" font-size="10" fill="#0f172a">6.9% (Test: 208) | B0 F1: 29.6%</text>
+
+  <!-- Disgust -->
+  <text x="580" y="292" font-size="10.5" font-weight="bold" fill="#be123c" text-anchor="end">5: disgust</text>
+  <rect x="588" y="279" width="11" height="18" fill="#e11d48" rx="2"/>
+  <text x="606" y="292" font-size="10" font-weight="bold" fill="#be123c">2.7% (Test: 68) | B0 F1: 0.0%–2.9% [COLLAPSED]</text>
+
+  <!-- Fear -->
+  <text x="580" y="328" font-size="10.5" font-weight="bold" fill="#be123c" text-anchor="end">2: fear</text>
+  <rect x="588" y="315" width="10" height="18" fill="#e11d48" rx="2"/>
+  <text x="605" y="328" font-size="10" font-weight="bold" fill="#be123c">2.7% (Test: 50) | B0 F1: 0.0%–3.5% [COLLAPSED]</text>
+
+  <rect x="520" y="346" width="420" height="46" fill="#fef2f2" stroke="#f87171" rx="4"/>
+  <text x="730" y="364" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="middle">Empirical Observation: Neutral (48.1% test) is 25× larger than Fear (1.9% test).</text>
+  <text x="730" y="381" font-size="9.5" fill="#7f1d1d" text-anchor="middle">Unweighted MELD FocalLoss (unlike IEMOCAP) causes minority-class collapse.</text>
+</svg>

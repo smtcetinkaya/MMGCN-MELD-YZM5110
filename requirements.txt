@@ -1,0 +1,9 @@
+# PyTorch & CUDA (pre-installed on Google Colab Tesla T4 runtime: PyTorch 2.14.1+cu130, Python 3.13.16)
+torch>=2.2.0
+torch-geometric==2.8.1
+scikit-learn>=1.5.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+numpy>=1.26.0
+tqdm>=4.66.0
+ipdb>=0.13.13,<1.0.0

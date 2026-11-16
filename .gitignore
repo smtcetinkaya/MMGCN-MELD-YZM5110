@@ -1,0 +1,11 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Do NOT commit restricted or large raw/pre-extracted datasets or checkpoints (per YZM5110 §5)
+*.pkl
+*.pt
+*.pth
+IEMOCAP_features/
+MELD_features/
